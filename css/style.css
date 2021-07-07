@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background: #6c5ce7;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper {
+	padding: 25px 30px;
+	background: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	border-radius: 2%;
+}
+.wrapper .title {
+	font-weight: 800;
+	text-align: center;
+	font-size: 2rem;
+	color: #111;
+}
+.wrapper .task-display {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	grid-auto-rows: minmax(50px, auto);
+	padding: 10px;
+	text-align: center;
+}
+.wrapper .task-display input {
+	margin: 15px;
+}
+
+#created {
+	grid-column: 3/ 4;
+	grid-row: 1 / 1;
+	padding-top: 10px;
+}
+#task-title {
+	grid-row: 2/2;
+	grid-column: 1/4;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#description {
+	grid-row: 3/3;
+	grid-column: 1/4;
+}
+
+#edit-btn {
+	grid-row: 4/4;
+	grid-column: 2/3;
+	border-radius: 12px;
+}
+
+.wrapper .inputFields {
+	margin: 25px;
+	display: block;
+}
+
+.wrapper .inputFields input[type="text"] {
+	font-size: medium;
+	width: 100%;
+}
+
+.wrapper .inputFields button.btn {
+	width: 60px;
+	height: 100%;
+	display: inline-block;
+	padding: 12px;
+	margin-left: 80px;
+	margin-top: 12px;
+	border-radius: 12px;
+}
+
+.task-display {
+	border: solid;
+}
