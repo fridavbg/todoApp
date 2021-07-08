@@ -16,16 +16,34 @@
 	<body>
 		<div class="wrapper">
 			<h2 class="title">To do list</h2>
+			<a href="./components/add.html" class="add-btn"
+				><button>Add new task</button></a
+			>
 			<div class="content">
 				<br />
-				<div class="task-display">
+				<div id="task-display">
+					<input type="checkbox" name="status" />
+					<p id="created">Created</p>
+					<p id="task-title">Apply for Printful's Developer School</p>
+					<br />
+					<p id="description">Description</p>
+					<a href="./components/edit.html" id="edit-btn"
+						><button>Edit</button></a
+					>
+				</div>
+			</div>
+			<div class="content">
+				<br />
+				<div id="task-display">
 					<input type="checkbox" name="status" />
 					<p id="created">Created</p>
 
 					<p id="task-title">Apply for Printful's Developer School</p>
 					<br />
 					<p id="description">Description</p>
-					<button id="edit-btn">Edit</button>
+					<a href="./components/edit.html" id="edit-btn"
+						><button>Edit</button></a
+					>
 				</div>
 			</div>
 		</div>
