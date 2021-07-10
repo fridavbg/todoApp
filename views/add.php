@@ -1,5 +1,5 @@
 <?php
-include "../requests/POST.php";
+// include "../requests/POST.php";
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ include "../requests/POST.php";
 						cols="40"
 					></textarea>
 
-        <button type="submit" class="btn">Save</button>
+        <button type="submit" name="submit" class="btn">Save</button>
                 </div>
 			</div>
 

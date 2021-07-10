@@ -1,11 +1,6 @@
 <?php
 include "DB.php";
 
-/* echo '<pre>';
-var_dump($_SERVER);
-echo '</pre>';
-exit; */
-
 /* $errors = [];
 
 if (!$task) {
@@ -28,6 +23,12 @@ $statement->bindValue(':description', $description);
 $statement->bindValue(':status', 0);
 $statement->bindValue(':date', $date);
 $statement->execute();
+}
+
+if (isset($_POST['submit'])) {
+    {
+        header("Location: ../index.php");
+    }
 }
 
 ?>
