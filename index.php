@@ -1,5 +1,5 @@
 <?php 
-    include "./class/DB.php"; 
+    include "./requests/GET.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 <body>
     <div class="wrapper">
         <h2 class="title">To do list</h2>
-        <a href="./components/add.php" class="btn"><button>Add new task</button></a>
+        <a href="./views/add.php" class="btn"><button>Add new task</button></a>
         <div class="content">
 
 
@@ -35,7 +35,7 @@
                 <p id="description">
                     <?php echo $task['description'] ?>
                 </p>
-                <a href="./components/edit.php" id="edit-btn"><button class="btn">Edit</button></a>
+                <a href="./views/edit.php" id="edit-btn"><button class="btn">Edit</button></a>
             </div>
             <?php } ?>
             <hr>

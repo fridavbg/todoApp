@@ -84,7 +84,12 @@ body {
 	grid-column: 2/3;
 }
 
-/* Add & Edit Page */
+/* Edit Page */
+
+.error {
+	background: brown;
+	color: cornflowerblue;
+}
 
 .wrapper .inputFields {
 	margin: 25px;
