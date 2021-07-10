@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 body {
 	width: 100%;
 	min-height: 100vh;
@@ -12,11 +11,14 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+/* General styling */
 .wrapper {
-	padding: 25px 30px;
+	padding: 30px;
+	margin: 50px;
 	background: #fff;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	border-radius: 2%;
+	text-align: center;
 }
 .wrapper .title {
 	font-weight: 800;
@@ -24,23 +26,39 @@ body {
 	font-size: 2rem;
 	color: #111;
 }
+.wrapper button {
+	margin: 12px;
+	padding: 15px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	border-radius: 12px;
+}
 
+/* Main Page */
 .wrapper #task-display {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 10px;
 	grid-auto-rows: minmax(50px, auto);
 	padding: 10px;
+	margin: 40px;
 	text-align: center;
 }
 
 #task-display {
 	border: solid;
+	border-radius: 12px;
 }
 
+#status {
+	grid-column: 1/1;
+	grid-row: 1/2;
+	align-self: center;
+	width: 40px;
+	height: 20px;
+}
 #created {
-	grid-column: 3/ 4;
-	grid-row: 1 / 1;
+	grid-column: 3/4;
+	grid-row: 1/1;
 	padding-top: 10px;
 }
 #task-title {
@@ -57,11 +75,10 @@ body {
 }
 /* Edit button */
 #task-display a button {
-	margin: 10px;
+	margin-right: 10px;
 	padding: 12px;
 	border-radius: 12px;
 }
-
 #edit-btn {
 	grid-row: 4/4;
 	grid-column: 2/3;
@@ -71,18 +88,20 @@ body {
 
 .wrapper .inputFields {
 	margin: 25px;
-	display: block;
 }
-
+.wrapper .inputFields textarea {
+	font-size: large;
+	width: 100%;
+	padding: 12px;
+}
 .wrapper .inputFields input[type="text"] {
 	font-size: medium;
 	width: 100%;
+	padding: 12px;
 }
 
 .wrapper .inputFields button.btn {
-	width: 60px;
 	height: 100%;
 	border-radius: 12px;
 	font-size: medium;
-	margin: 12px;
 }

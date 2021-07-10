@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<h2 class="title">Edit task</h2>
+			<h2 class="title">Add a new task</h2>
 			<div class="content">
 				<div class="inputFields">
 					<label for="task">Title:</label>
@@ -33,10 +33,9 @@
 					</textarea>
 					<br />
 					<button type="submit" class="btn">Save</button>
-					<button href="index.html" class="btn">Delete</button>
+					<a href="../index.php"><button class="btn">Go back</button></a>
 				</div>
 			</div>
-			<a href="../index.html"><button class="btn">Go back</button></a>
 		</div>
 	</body>
 </html>
