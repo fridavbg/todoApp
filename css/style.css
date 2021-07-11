@@ -86,9 +86,10 @@ body {
 
 /* Edit Page */
 
-.error {
-	background: brown;
-	color: cornflowerblue;
+.wrapper .error {
+	border-style: solid;
+	color: red;
+	padding: 12px;
 }
 
 .wrapper .inputFields {

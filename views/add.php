@@ -1,5 +1,6 @@
 <?php
-// include "../requests/POST.php";
+include "../requests/POST.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -17,21 +18,19 @@
 	<body>
 		<div class="wrapper">
 			<h2 class="title">Add a new task</h2>
-
-	<?php if(!empty($errors)): ?>
-		<div class="error">
-			<?php foreach ($errors as $error): ?> 
-				<div><?php echo $error ?></div>
-				<?php endforeach; ?>
-		</div>
-	<?php endif; ?>
-
-        <form action="../requests/POST.php" method="post">
+			<br>
+			<!-- Error message display -->
+			<?php if(!empty($error)): ?>
+				<div class="error">
+					<?php echo $error;?>
+				</div>
+			<?php endif; ?>
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
             <div class="content">
 				<div class="inputFields">
 					<label for="task">Title:</label>
 					
-					<input type="text" name="task" placeholder="Title" />
+					<input type="text" name="task" placeholder="Title"/>
 
 					<label for="task">Description:</label>
 					<textarea
