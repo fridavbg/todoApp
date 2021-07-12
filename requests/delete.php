@@ -14,5 +14,3 @@ $statement->bindValue(':id', $id);
 $statement->execute();
 
 header("Location: ../index.php");
-
-?>

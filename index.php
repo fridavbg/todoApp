@@ -1,5 +1,5 @@
-<?php 
- include "./requests/get.php";
+<?php
+include "./requests/get.php";
 ?>
 
 <!DOCTYPE html>
@@ -24,54 +24,38 @@
 
 
             <hr>
-            <?php 
+            <?php
             foreach ($tasks as $i => $task) { ?>
 
-            <div id="task-display">
-                <input type="checkbox" id="status" value="<?php $task['status']?>"/>
-                <p id="created"><?php echo $task['created'] ?></p>
-                <p id="task-title"><?php echo $task['task'] ?></p>
-                <br />
-                <p id="description">
-                    <?php echo $task['description'] ?>
-                </p>
-                <a href="./requests/update.php"<?php $task['id']?>" id="edit-btn"><button class="btn">Edit</button></a>
-
-                <form method="POST" action="./requests/delete.php">
-                    <input type="hidden" 
-                            name="id" 
-                            value="<?php echo $task['id']?>
+                <!-- ERROR DISPLAY
+            <?php if (!empty($tasks)) : ?>
+				<div class="error">
+					<?php echo "No tasks to show"; ?>
+				</div>
+			<?php endif; ?> 
+             -->
+                <div id="task-display">
+                    <input type="checkbox" id="status" value="<?php $task['status'] ?>" />
+                    <p id="created">Created: <?php echo $task['created'] ?></p>
+                    <p id="task-title"><?php echo $task['task'] ?></p>
+                    <br />
+                    <p id="description">
+                        <?php echo $task['description'] ?>
+                    </p>
+                    <a href="./requests/update.php?id=<?php echo $task['id'] ?>" id="edit-btn" class="btn">
+                        <button>Edit</button>
+                    </a>
+                    </form>
+                    <form method="POST" action="./requests/delete.php">
+                        <input type="hidden" name="id" value="<?php echo $task['id'] ?>
                     ">
-                     <button 
-                     type="submit" 
-                     class="btn">
-                     Delete
-                    </button>
-                </form>
-           
-            </div>
+                        <button type="submit" id="delete-btn" ; class="btn">
+                            Delete
+                        </button>
+                </div>
             <?php } ?>
-            <hr>
-
         </div>
     </div>
 </body>
 
 </html>
-
-<!-- Hard Coded
-<div id="task-display">
-                <input type="checkbox" id="status" />
-                <p id="created">Created:</p>
-                <p id="task-title">Apply for Printful's Developer School</p>
-                <br />
-                <p id="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-                <a href="./components/edit.php" id="edit-btn"><button class="btn">Edit</button></a>
-            </div>
-
- -->

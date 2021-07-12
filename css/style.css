@@ -57,7 +57,7 @@ body {
 	height: 20px;
 }
 #created {
-	grid-column: 3/4;
+	grid-column: 2/4;
 	grid-row: 1/1;
 	padding-top: 10px;
 }
@@ -81,7 +81,10 @@ body {
 }
 #edit-btn {
 	grid-row: 4/4;
-	grid-column: 2/3;
+	grid-column: 3/4;
+}
+form #delete-btn {
+	background-color: rgb(236, 53, 53);
 }
 
 /* Edit Page */

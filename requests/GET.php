@@ -7,5 +7,5 @@ include "./requests/DB.php";
 $statement = $pdo->prepare('SELECT * FROM todo_list ORDER BY created DESC');
 $statement->execute();
 // Fetch all tasks as an assoc array
-$tasks = $statement->fetchAll(PDO::FETCH_ASSOC); 
+$tasks = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
