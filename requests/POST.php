@@ -7,8 +7,9 @@ if (isset($_POST['submit'])) {
     $task = $_POST['task'];
     $description = $_POST['description'];
     $date = date('Y-m-d H:i:s');
+
         if (empty($task)) {
-            $error = "Please enter a task";
+            $error = "Please enter a task title";
         } else {
             $statement = $pdo->prepare("INSERT INTO todo_list (task, description, status, created)
             VALUES (:task, :description, :status, :date)    
@@ -22,4 +23,5 @@ if (isset($_POST['submit'])) {
                 header("Location: ../index.php");
             }
 }
+
 ?>

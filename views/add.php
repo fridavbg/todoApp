@@ -1,6 +1,5 @@
 <?php
 include "../requests/POST.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +24,7 @@ include "../requests/POST.php";
 					<?php echo $error;?>
 				</div>
 			<?php endif; ?>
+			
 			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
             <div class="content">
 				<div class="inputFields">
