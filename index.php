@@ -52,6 +52,7 @@ include "./requests/get.php";
                         <button type="submit" id="delete-btn" ; class="btn">
                             Delete
                         </button>
+                    </form>    
                 </div>
             <?php } ?>
         </div>
