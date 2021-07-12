@@ -1,5 +1,5 @@
 <?php 
-    include "./requests/GET.php";
+ include "./requests/get.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,23 +19,36 @@
 <body>
     <div class="wrapper">
         <h2 class="title">To do list</h2>
-        <a href="./views/add.php" class="btn"><button>Add new task</button></a>
+        <a href="./requests/create.php" class="btn"><button>Add new task</button></a>
         <div class="content">
 
 
             <hr>
             <?php 
-            foreach ($tasks as $task) { ?>
+            foreach ($tasks as $i => $task) { ?>
 
             <div id="task-display">
-                <input type="checkbox" id="status" />
+                <input type="checkbox" id="status" value="<?php $task['status']?>"/>
                 <p id="created"><?php echo $task['created'] ?></p>
                 <p id="task-title"><?php echo $task['task'] ?></p>
                 <br />
                 <p id="description">
                     <?php echo $task['description'] ?>
                 </p>
-                <a href="./views/edit.php" id="edit-btn"><button class="btn">Edit</button></a>
+                <a href="./requests/update.php"<?php $task['id']?>" id="edit-btn"><button class="btn">Edit</button></a>
+
+                <form method="POST" action="./requests/delete.php">
+                    <input type="hidden" 
+                            name="id" 
+                            value="<?php echo $task['id']?>
+                    ">
+                     <button 
+                     type="submit" 
+                     class="btn">
+                     Delete
+                    </button>
+                </form>
+           
             </div>
             <?php } ?>
             <hr>
