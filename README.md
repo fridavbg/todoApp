@@ -9,3 +9,13 @@ Simple to do app with PHP, MySQL, HTML, CSS and JavaScript.
 3. A view that allows to edit a to do item.
 
 ## Schema
+
+
+--------
+
+Currently trying to:
+
+[] Move the deleteBtn to the edit page
+[] Have all errorMsgs with Ajax . JavaScript
+[] Refactor and clean up code & fix the styling
+
