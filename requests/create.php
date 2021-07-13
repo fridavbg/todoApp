@@ -1,6 +1,6 @@
 <?php
 include "DB.php";
-
+include_once "./partials/header.php";
 $error = "";
 
 if (isset($_POST['submit'])) {
@@ -25,20 +25,6 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-	<link rel="stylesheet" href="../css/style.css" />
-
-	<title>To-Do List</title>
-</head>
-
-<body>
 	<div class="wrapper">
 		<h2 class="title">Add a new task</h2>
 
