@@ -1,6 +1,6 @@
 <?php
 include "DB.php";
-include_once "./partials/header.php";
+include_once "../views/partials/header.php";
 $error = "";
 
 if (isset($_POST['submit'])) {

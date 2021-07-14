@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
 
 <div class="wrapper">
     <h2 class="title">Edit task: <?php echo $task ?> </h2>
-    <?php include_once "./forms/editForm.php" ?>
+    <?php include_once "../views/forms/editForm.php" ?>
     <a href="../index.php"><button class="btn">Go Back</button></a>
 </div>
 </body>

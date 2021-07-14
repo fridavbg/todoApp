@@ -1,6 +1,6 @@
 <?php 
 
-require_once "DB.php";
+include "DB.php";
 
 $id = $_POST['id'] ?? null;
 
@@ -14,4 +14,3 @@ $statement->bindValue(':id', $id);
 $statement->execute();
 
 header("Location: ../index.php");
-?>
