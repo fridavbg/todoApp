@@ -13,7 +13,7 @@ include "./views/get.php";
         <?php
         foreach ($tasks as $i => $task) { ?>
 
-            <!-- ERROR DISPLAY -- NOT WORKING
+            <!-- ERROR DISPLAY
             <?php if (!empty($tasks)) : ?>
 				<div class="error">
 					<?php echo "No tasks to show"; ?>
@@ -22,7 +22,7 @@ include "./views/get.php";
              -->
             <div id="task-display">
                 <input type="checkbox" id="status" value="<?php $task['status'] ?>" />
-                <p id="created">Created: <br><?php echo $task['created'] ?></p>
+                <p id="created">Created: <?php echo $task['created'] ?></p>
                 <p id="task-title"><?php echo $task['task'] ?></p>
                 <br />
                 <p id="description">
