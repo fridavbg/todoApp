@@ -28,3 +28,4 @@ php -S localhost:8080
 - [] Have all errorMsgs with Ajax (JavaScript)
 - [] Refactor and clean up the code
 - [] Fix the styling
+- [] Save the status/checkbox to the database
