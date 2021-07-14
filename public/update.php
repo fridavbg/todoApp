@@ -29,9 +29,14 @@ if (isset($_POST['submit'])) {
         $statement->bindValue(':task', $task);
         $statement->bindValue(':description', $description);
         $statement->bindValue(':id', $id);
+
         $statement->execute();
 
-        header("Location: ../index.php");
+        if (headers_sent()) {
+            die("Redirect failed. Please click on this link: <a href='index.php'>Main Page</a>");
+        } else {
+            exit(header("Location: index.php"));
+        }
     }
 }
 ?>
@@ -39,7 +44,7 @@ if (isset($_POST['submit'])) {
 <div class="wrapper">
     <h2 class="title">Edit task: <?php echo $task ?> </h2>
     <?php include_once "../views/forms/editForm.php" ?>
-    <a href="../index.php"><button class="btn">Go Back</button></a>
+    <a href="index.php"><button class="btn">Go Back</button></a>
 </div>
 </body>
 

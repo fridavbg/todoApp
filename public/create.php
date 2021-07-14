@@ -19,15 +19,19 @@ if (isset($_POST['submit'])) {
 		$statement->bindValue(':date', date('Y-m-d H:i:s'));
 		$statement->execute();
 
-		header("Location: ../index.php");
-	}
+        if (headers_sent()) {
+            die("Redirect failed. Please click on this link: <a href='index.php'>Main Page</a>");
+        } else {
+            exit(header("Location: index.php"));
+        }
+    }	
 }
 ?>
 
 <div class="wrapper">
 		<h2 class="title">Add a new task</h2>
 		<?php include_once "../views/forms/addForm.php"; ?>
-		<a href="../index.php"><button class="btn">Go Back</button></a>
+		<a href="index.php"><button class="btn">Go Back</button></a>
 	</div>
 </body>
 

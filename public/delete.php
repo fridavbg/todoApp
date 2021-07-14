@@ -1,5 +1,4 @@
 <?php 
-
 include "DB.php";
 
 $id = $_POST['id'] ?? null;
@@ -13,4 +12,5 @@ $statement = $pdo->prepare('DELETE FROM todo_list WHERE id = :id');
 $statement->bindValue(':id', $id);
 $statement->execute();
 
-header("Location: ../index.php");
+header("Location: index.php");
+?>
