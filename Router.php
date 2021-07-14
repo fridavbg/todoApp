@@ -30,10 +30,15 @@ class Router
         } else {
             $fn = $this->postRoutes[$currentUrl] ?? null;
         }        
-        if (!$fn) {
+        if ($fn) {
             echo "Page not found";
             exit;
         }
         echo call_user_func($fn, $this);
+    }
+
+    public function renderView($view) 
+    {
+        include_once __DIR__."/views/$view.php";
     }
 }

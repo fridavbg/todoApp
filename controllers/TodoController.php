@@ -4,7 +4,7 @@ namespace app\controllers;
 
 class TodoController 
 {
-    public function index() {
+    public function index($router) {
         echo "Index page";
     }
     
