@@ -1,11 +1,11 @@
 <?php
-include_once "./requests/partials/header.php";
-include "./requests/get.php";
+include_once "./views/partials/header.php";
+include "./views/get.php";
 ?>
 
     <div class="wrapper">
         <h2 class="title">To do list</h2>
-        <a href="./requests/create.php" class="btn"><button>Add new task</button></a>
+        <a href="./views/create.php" class="btn"><button>Add new task</button></a>
         <div class="content">
 
 
@@ -28,11 +28,11 @@ include "./requests/get.php";
                     <p id="description">
                         <?php echo $task['description'] ?>
                     </p>
-                    <a href="./requests/update.php?id=<?php echo $task['id'] ?>" id="edit-btn" class="btn">
+                    <a href="./views/update.php?id=<?php echo $task['id'] ?>" id="edit-btn" class="btn">
                         <button>Edit</button>
                     </a>
                     </form>
-                    <form method="POST" action="./requests/delete.php">
+                    <form method="POST" action="./views/delete.php">
                         <input type="hidden" name="id" value="<?php echo $task['id'] ?>
                     ">
                         <button type="submit" id="delete-btn" ; class="btn">
