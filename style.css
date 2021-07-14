@@ -10,6 +10,7 @@ body {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+	font-family: "Zen Loop", cursive;
 }
 /* General styling */
 .wrapper {
@@ -23,7 +24,7 @@ body {
 .wrapper .title {
 	font-weight: 800;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 5rem;
 	color: #111;
 }
 .wrapper button {
@@ -31,17 +32,20 @@ body {
 	padding: 15px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	border-radius: 12px;
+	font-family: "Zen Loop", cursive;
+	font-size: 25px;
 }
 
 /* Main Page */
 .wrapper #task-display {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 2fr);
 	gap: 10px;
 	grid-auto-rows: minmax(50px, auto);
 	padding: 10px;
 	margin: 40px;
 	text-align: center;
+	font-size: 25px;
 }
 
 #task-display {
@@ -50,28 +54,29 @@ body {
 }
 
 #status {
-	grid-column: 1/1;
+	grid-column: 1/2;
 	grid-row: 1/2;
 	align-self: center;
 	width: 40px;
 	height: 20px;
 }
 #created {
-	grid-column: 2/4;
+	grid-column: 4/4;
 	grid-row: 1/1;
 	padding-top: 10px;
+	margin-right: 10px;
 }
 #task-title {
 	grid-row: 2/2;
-	grid-column: 1/4;
-	padding: 10px;
-	font-size: 20px;
-	font-weight: bold;
+	grid-column: 2/4;
+	padding: 15px;
+	font-size: 32px;
+	font-weight: bolder;
+	text-decoration: underline;
 }
-
 #description {
 	grid-row: 3/3;
-	grid-column: 1/4;
+	grid-column: 2/4;
 }
 /* Edit button */
 #task-display a button {
@@ -81,10 +86,17 @@ body {
 }
 #edit-btn {
 	grid-row: 4/4;
-	grid-column: 3/4;
+	grid-column: 4/4;
 }
-form #delete-btn {
+
+.wrapper form {
+	grid-row: 4/4;
+	grid-column: 1/1;
+}
+
+#delete-btn {
 	background-color: rgb(236, 53, 53);
+	grid-row: 4/4;
 }
 
 /* Edit Page */
@@ -93,6 +105,7 @@ form #delete-btn {
 	border-style: solid;
 	color: red;
 	padding: 12px;
+	grid-row: 1/4;
 }
 
 .wrapper .inputFields {
