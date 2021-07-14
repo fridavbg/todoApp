@@ -1,0 +1,17 @@
+{
+	"name": "frida/todo-app",
+	"authors": [
+		{
+			"name": "fridavbg",
+			"email": "fperssontech@gmail.com"
+		}
+	],
+	"require": {
+		"guzzlehttp/guzzle": "^7.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"app\\": "./"
+		}
+	}
+}

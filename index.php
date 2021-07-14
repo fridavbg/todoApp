@@ -1,47 +1,21 @@
 <?php
-include_once "./views/partials/header.php";
-include "./public/get.php";
-?>
 
-<div class="wrapper">
-    <h2 class="title">To do list</h2>
-    <a href="./public/create.php" class="btn"><button>Add new task</button></a>
-    <div class="content">
+require_once __DIR__.'/vendor/autoload.php';
 
+use app\controllers\TodoController;
+use app\Router;
 
-        <hr>
-        <?php
-        foreach ($tasks as $i => $task) { ?>
+$router = new Router();
 
-            <!-- ERROR DISPLAY -- NOT WORKING YET
-            <?php if (!empty($tasks)) : ?>
-				<div class="error">
-					<?php echo "No tasks to show"; ?>
-				</div>
-			<?php endif; ?> 
-             -->
-            <div id="task-display">
-                <input type="checkbox" id="status" value="<?php $task['status'] ?>" />
-                <p id="created">Created: <br><?php echo $task['created'] ?></p>
-                <p id="task-title"><?php echo $task['task'] ?></p>
-                <br />
-                <p id="description">
-                    <?php echo $task['description'] ?>
-                </p>
-                <a href="./public/update.php?id=<?php echo $task['id'] ?>" id="edit-btn" class="btn">
-                    <button>Edit</button>
-                </a>
-                <form method="POST" action="./public/delete.php">
-                    <input type="hidden" name="id" value="<?php echo $task['id'] ?>
-                    ">
-                    <button type="submit" id="delete-btn" ; class="btn">
-                        Delete
-                    </button>
-                </form>
-            </div>
-        <?php } ?>
-    </div>
-</div>
-</body>
+$router->get('/', [TodoController::class, 'index']);
+$router->get('/tasks', [TodoController::class, 'index']);
 
-</html>
+$router->get('/tasks/create', [TodoController::class, 'create']);
+$router->post('/tasks/create', [TodoController::class, 'create']);
+
+$router->get('/tasks/update', [TodoController::class, 'update']);
+$router->post('/tasks/update', [TodoController::class, 'update']);
+
+$router->post('/tasks/delete', [TodoController::class, 'delete']);
+
+$router->resolve();

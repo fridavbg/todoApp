@@ -1,6 +1,7 @@
 <?php
 include_once "../views/partials/header.php";
 include "get.php";
+
 ?>
 
 <div class="wrapper">

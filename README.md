@@ -9,3 +9,13 @@ Simple to do app with PHP, MySQL, HTML, CSS and JavaScript.
 3. A view that allows to edit a to do item.
 
 ## Schema
+
+## Setup
+
+Clone repo on a server running PHP e.g XAMP
+
+Start PHP on [localhost:8080](http://localhost:8080/public)
+
+```
+php -S localhost:8080
+```
