@@ -1,7 +1,7 @@
 
 <?php
 
-include "./requests/DB.php";
+require_once "./views/DB.php";
 
 // GET - Get All tasks
 $statement = $pdo->prepare('SELECT * FROM todo_list ORDER BY created DESC');
